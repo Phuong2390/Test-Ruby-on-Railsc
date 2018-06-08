@@ -1,0 +1,18 @@
+<h1>Add Task</h1>
+<%= form_for :task, url: tasks_path do |post| %>
+	<p>
+		<%= post.label :content %><br/>
+		<%= post.text_field :content %><br/>
+	</p>
+	<p>
+		<%= post.label :comment %><br/>
+		<%= post.text_area :comment %><br/>
+	</p>
+	<p>
+		<%= post.label :status %>
+		<%= post.check_box :status %><br/>
+	</p>
+	<p>
+		<%= post.submit %>
+	</p>
+<% end %>
